@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keycloak.API", "Keycloak.API\Keycloak.API.csproj", "{6BBBCAEA-A0B5-4C8D-91BD-DBA6A65261AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keycloak.API", "Keycloak.API\Keycloak.API.csproj", "{6BBBCAEA-A0B5-4C8D-91BD-DBA6A65261AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keycloak.Web", "Keycloak.Web\Keycloak.Web.csproj", "{416AA049-C293-4E86-B441-D33BFF0F8954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keycloak.Web", "Keycloak.Web\Keycloak.Web.csproj", "{416AA049-C293-4E86-B441-D33BFF0F8954}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

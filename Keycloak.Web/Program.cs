@@ -25,7 +25,7 @@ builder.Services.AddAuthentication(options =>
         opts.ResponseType = "code";
         //opts.GetClaimsFromUserInfoEndpoint = true;
         opts.SaveTokens = true;
-        opts.Scope.Add("myscope");
+        opts.Scope.Add("myscope myrolescope");
         opts.TokenValidationParameters = new TokenValidationParameters
         {
             NameClaimType = "preferred_username",

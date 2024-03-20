@@ -31,7 +31,7 @@ namespace Keycloak.Web.Pages
         }
 
 
-        public async Task<IActionResult> OnGetSignOut()
+        public async Task<IActionResult> OnPostSignOut()
         {
             return new SignOutResult(
                 new[]

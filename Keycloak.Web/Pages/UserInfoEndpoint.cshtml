@@ -1,0 +1,22 @@
+﻿@page
+@model Keycloak.Web.Pages.UserInfoEndpointModel
+@{
+}
+
+
+
+@if (Model.UserInfo.IsError)
+{
+    <div class="alert alert-danger">
+        @Model.UserInfo.Error
+    </div>
+}
+
+<div class="alert alert-info">
+    <h2>User Info</h2>
+    @foreach (var claim in Model.UserInfo.Claims)
+    {
+        <div>@claim.Type :  @claim.Value</div>
+    }
+    </div>
+

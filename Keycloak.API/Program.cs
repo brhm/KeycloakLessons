@@ -8,7 +8,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     {
         opts.Authority = "http://localhost:8080/realms/myrealm";
         opts.RequireHttpsMetadata = false;
-        //opts.Audience = "resource_api1";
+        opts.Audience = "api-one-backend";
     });
 
 builder.Services.AddAuthorization();

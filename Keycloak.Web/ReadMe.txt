@@ -18,5 +18,16 @@ Account : f-cakiroglu@outlook.com password :YusaSayu16.
 
 
 Keycloak Book
-Title : Adding a custom property
+Title(3): Adding a custom property ( for user)
+
+Title(4) : Invoking the UserInfo endpoint  => custom attribute for userinfo endpoint
+
+Title(4) : Adding roles to the ID token
+
+Title(5) : Requiring user consent
+
+Title(5) : Using the audience to limit token access => Add Audience to the token
+Title(5) : Using roles to limit token access => Add role to the token
+Title(5) : Using the scope to limit token access => Add scope to the token
+
 
