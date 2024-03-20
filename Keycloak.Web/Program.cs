@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,13 +18,14 @@ builder.Services.AddAuthentication(options =>
     .AddOpenIdConnect(opts =>
     {
         opts.RequireHttpsMetadata = false;
+
         opts.Authority = "http://localhost:8080/realms/myrealm";
         opts.ClientId = "myclient";
-        //opts.ClientSecret = "secret";
+        opts.ClientSecret = "vapd0UTT3emJvssqXi80KJQ2Isyot0BC";
         opts.ResponseType = "code";
         //opts.GetClaimsFromUserInfoEndpoint = true;
         opts.SaveTokens = true;
-        //opts.Scope.Add("profile");
+        opts.Scope.Add("myscope");
         opts.TokenValidationParameters = new TokenValidationParameters
         {
             NameClaimType = "preferred_username",

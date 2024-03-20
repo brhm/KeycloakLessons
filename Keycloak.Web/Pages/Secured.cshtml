@@ -2,5 +2,32 @@
 @model Keycloak.Web.Pages.SecuredModel
 @{
 }
+<form asp-page-handler="SignOut">
+    <button type="submit">Sign out</button>
+</form>
 
-<h2>Secured Page</h2>
+
+<div class="alert alert-success" style="word-wrap:break-word">
+    <h2>Tokens</h2>
+    
+
+    <div>Access Token :<hr/>@Model.AccessToken</div>
+    
+    <hr/>
+    <div>Id Token :<hr/>@Model.IdToken</div>
+    <hr/>
+    <div>Refresh Token :<hr/>@Model.RefreshToken</div>
+
+</div>
+
+<div class="alert alert-info">
+    
+    <h2>Id Token Payload</h2>
+
+    @foreach(var claim in User.Claims.ToList())
+    {
+        <div>@claim.Type   : @claim.Value</div>
+    }
+
+</div>
+
