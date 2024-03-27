@@ -5,29 +5,21 @@ docker run -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=Password12* -p 808
 
 http://localhost:8080/realms/myrealm/.well-known/openid-configuration
 
-Key cloak admin console
 
-http://localhost:8080
-
-Keycloadk account UI
-http://localhost:8080/realms/myrealm/account
-
-
-Account : f-cakiroglu@outlook.com password :YusaSayu16.
+- 1.step
+curl --location 'http://localhost:8080/realms/myrealm/protocol/openid-connect/auth/device' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=tv'
 
 
+- 2.step
+curl --location 'http://localhost:8080/realms/myrealm/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=urn:ietf:params:oauth:grant-type:device_code' \
+--data-urlencode 'client_id=tv' \
+--data-urlencode 'device_code=6LtVR5pwKbeUiIngw8Tejuuw-bYpgKzYqUhpTdRE3Gk'
 
-Keycloak Book
-Title(3): Adding a custom property ( for user)
 
-Title(4) : Invoking the UserInfo endpoint  => custom attribute for userinfo endpoint
-
-Title(4) : Adding roles to the ID token
-
-Title(5) : Requiring user consent
-
-Title(5) : Using the audience to limit token access => Add Audience to the token
-Title(5) : Using roles to limit token access => Add role to the token
-Title(5) : Using the scope to limit token access => Add scope to the token
+http://localhost:8080/realms/myrealm/protocol/openid-connect/auth/device
 
 
